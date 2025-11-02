@@ -49,13 +49,7 @@ class SweetTests(APITestCase):
     def test_purchase_decreases_quantity(self):
         """Purchasing should reduce stock quantity"""
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.admin_token}')
-        sweet = Sweet.objects.create(
-            name='Gulab Jamun',
-            category='Syrup',
-            price=100,
-            quantity=5,
-            added_by=self.admin  # ✅ Fix here
-        )
+        sweet = Sweet.objects.create(name='Gulab Jamun', category='Syrup', price=100, quantity=5)
         url = reverse('sweet_purchase', args=[sweet.id])
         res = self.client.post(url)
         sweet.refresh_from_db()
