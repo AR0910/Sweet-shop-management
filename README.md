@@ -150,7 +150,62 @@ view commit:
 20e254c Initial commit - setup Sweet Shop backend structure
 
 ## SCREENSHOTS
+has two folder - user and admin
+#user:
+- login
+- dashboard
+- search sweet
+- purchase option - where the quantity decreases before and after the purchase is done
 
+#admin:
+- login
+- dashboard
+- add,edit,delete sweet option
 
+## my AI-usage:
+AI Tools Used
+
+ChatGPT (OpenAI GPT-5)
+
+🔸 How AI Was Used
+
+Used ChatGPT to:
+
+Assisted in generating Django code for authentication and CRUD.
+
+Debug IntegrityError and refine TDD test structure.
+
+Write React frontend logic for dashboard and search filters.
+
+🔸 Reflection on AI Impact
+
+AI tools significantly improved my development speed and confidence in structuring the project.
+It helped me understand best practices in REST API design, clean code structuring, and testing workflows.
+I maintained ownership by verifying and modifying all generated code to ensure correctness, readability, and maintainability.
+
+## Test report:
+- my output report, after running the following command
+-      coverage report -m                                                       
+Name                                                                                     Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------------------------------------------------------
+manage.py                                                                                   11      2    82%   12-13
+sweets\__init__.py                                                                           0      0   100%
+sweets\admin.py                                                                              6      0   100%
+sweets\apps.py                                                                               4      0   100%
+sweets\migrations\0001_initial.py                                                            7      0   100%
+sweets\migrations\0002_sweet_created_at_sweet_description_sweet_updated_at_and_more.py       7      0   100%
+sweets\migrations\0003_alter_sweet_added_by_alter_sweet_category_and_more.py                 6      0   100%
+sweets\migrations\__init__.py                                                                0      0   100%
+sweets\models.py                                                                            20      3    85%   19, 33-34      
+sweets\permissions.py                                                                        9      4    56%   10-12, 16      
+sweets\serializers.py                                                                       16      0   100%
+sweets\tests.py                                                                             43      1    98%   64
+sweets\urls.py                                                                               4      0   100%
+sweets\views.py                                                                             78     35    55%   20-21, 53-56, 63-87, 97, 99, 108-113
+sweetshop_api\__init__.py                                                                    0      0   100%
+sweetshop_api\settings.py                                                                   23      0   100%
+sweetshop_api\urls.py                                                                        7      1    86%   8
+----------------------------------------------------------------------------------------------------------------------        
+TOTAL                                                                                      241     46    81%
 
 
