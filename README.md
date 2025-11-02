@@ -145,9 +145,7 @@ view commit:
 -      git log --oneline
 
 # my commit output:
-6d9ab19 (HEAD -> main) test(GREEN): fix Sweet purchase test by adding required added_by field- Provided admin user as 'added_by' when creating Sweet instance.- All tests now pass successfully.Co-authored-by: ChatGPT <noreply@openai.com>
-414b6ba test(RED): add failing test for Sweet purchase logic- Added test case to check quantity decreases after purchase.- Test fails because 'added_by' foreign key is missing.- Confirms that validation is working.Co-authored-by: ChatGPT <noreply@openai.com>
-20e254c Initial commit - setup Sweet Shop backend structure
+**check in the commit history tab**
 
 ## SCREENSHOTS
 has two folder - user and admin
