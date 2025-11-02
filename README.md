@@ -93,8 +93,64 @@ sweet_shop/
 ```bash
 git clone https://github.com/<your-username>/sweet-shop.git
 cd sweet-shop/backend
+```
+### 🔹 2. Setup the Backend (Django)
+create a virutal environment and install dependencies:
+```bash
+python -m venv venv
+venv\Scripts\activate          # (Windows)
+# or source venv/bin/activate  # (Mac/Linux)
+
+pip install -r requirements.txt
+```
+run the migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
+create an admin user:
+-       python manage.py createsuperuser
+
+### 🔹 3. Setup the Frontend (React)   
+in another terminal, run:
+-      cd ../frontend
+      npm install
+      npm start
+
+### 🔹4. run the test  
+-      python manage.py test
+For coverage report:
+-      pip install coverage
+      coverage run manage.py test
+      coverage report -m
+
+
+## Test-Driven Development (TDD)
+
+This project follows the Red-Green-Refactor workflow for backend logic.
+
+Stage	Description	Git Commit Example
+🔴 RED	
+    -  Write a failing test first to define desired behavior	
+    -  test: add failing tests for Sweet purchase (RED)
+🟢 GREEN	
+    - Implement minimal code to make the test pass	
+    - fix: provide 'added_by' user in Sweet creation test (GREEN)
+🧩 REFACTOR	
+    - Clean up and optimize code without changing behavior	
+    - refactor: simplify Sweet test setup and improve readability
+
+view commit:
+-      git log --oneline
+
+# my commit output:
+6d9ab19 (HEAD -> main) test(GREEN): fix Sweet purchase test by adding required added_by field- Provided admin user as 'added_by' when creating Sweet instance.- All tests now pass successfully.Co-authored-by: ChatGPT <noreply@openai.com>
+414b6ba test(RED): add failing test for Sweet purchase logic- Added test case to check quantity decreases after purchase.- Test fails because 'added_by' foreign key is missing.- Confirms that validation is working.Co-authored-by: ChatGPT <noreply@openai.com>
+20e254c Initial commit - setup Sweet Shop backend structure
+
+## SCREENSHOTS
 
 
 
-## 🏗️ Folder Structure
 
